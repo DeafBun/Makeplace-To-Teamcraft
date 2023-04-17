@@ -1,5 +1,5 @@
 ### CREATED BY PETRA ULSTRAD
-### HTTPS://PETRA.CARRD.CO
+### HTTPS://DEAFBUN.CARRD.CO
 ### IF I SEE ANYONE CHARGING FOR THIS PLS DONT IDK HOW TO LICENSE ITS JUST SUPPOSED TO BE A NICE PIECE OF CODE THATLL HELP PEOPLE DEAL WITH A LITTLE LESS MONOTANY
 
 import json
@@ -667,5 +667,3 @@ if thinkmode == 1:
 
 
 input("Please hit enter to close the program")
-
-### C:\Program Files (x86)\Steam\steamapps\common\FINAL FANTASY XIV Online\makeplace\MakePlace\Save\dead_lobster_v2.json
