@@ -7,4 +7,6 @@ If you have any complaints/questions/etc, please give me a holler at my tech sup
 
 Download the .exe: https://github.com/DeafBun/Makeplace-To-Teamcraft/raw/main/Makeplace%20to%20Teamcraft%20Importer.exe
 
+You can also run the .py file in your IDE of choice!
+
 GUI soon(tm)
