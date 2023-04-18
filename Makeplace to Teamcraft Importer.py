@@ -1,5 +1,5 @@
 ### CREATED BY PETRA ULSTRAD
-### HTTPS://DEAFBUN.CARRD.CO
+### HTTPS://PETRA.CARRD.CO
 ### IF I SEE ANYONE CHARGING FOR THIS PLS DONT IDK HOW TO LICENSE ITS JUST SUPPOSED TO BE A NICE PIECE OF CODE THATLL HELP PEOPLE DEAL WITH A LITTLE LESS MONOTANY
 
 import json
@@ -10,15 +10,32 @@ import time
 browser = webbrowser.get()
 counter = {}
 
+##DISCLAIMERS:
+print("Please be sure to use the most recent version of Makeplace for this converter to work at its best!")
+print("")
+time.sleep(2)
+print("To get your filepath to paste below, shift + right click on your .json file, and select \"Copy as path\"")
+print("")
+time.sleep(2)
+print("Be sure to remove the quotation marks from the file path as well!")
+print("")
+time.sleep(2)
+print("Happy Housing!")
+print("")
+time.sleep(2)
+
 ## FILE AND URL
 mpFile = input("Please input your file path: ")
+print("")
 file = open(mpFile)
 data = json.load(file)
 url = "https://ffxivteamcraft.com/import/"
 
 ## THINKMODE TOGGLE
-thinkmode = int(input("1 to turn think mode on to see all of the guts, 0 to leave it off. Enabling this option WILL slow the program down SIGNIFICANTLY!!!"))
+thinkmode = 0
 speed = 0
+
+money = 0
 
 if thinkmode != 1:
     thinkmode = 0
@@ -80,6 +97,9 @@ outsideFurniture = data["exteriorFurniture"]
 insideFixtures = data["interiorFixture"]
 outsideFixtures = data["exteriorFixture"]
 
+## HOUSE SIZE
+houseSize = data["houseSize"]
+
 #########################################################################################################################################
 
 #### INITIALIZE ALL OF THE LISTS
@@ -107,6 +127,10 @@ dyeNames = []
 dyeID = []
 dyelistrawIN = list(extract_element_from_json(data, ["interiorFurniture", "properties", "color"]))
 dyelistrawOUT = list(extract_element_from_json(data, ["exteriorFurniture", "properties", "color"]))
+
+## Blank Inner Wall
+bw_idlist = []
+bwDataRaw = list(extract_element_from_json(data, ["interiorFurniture", "properties", "material"]))
 
 ## EVERYTHING LIST
 furniturelistfull = []
@@ -531,6 +555,126 @@ for i in dyelistclean:
 
 #########################################################################################################################################
 
+## BLANKWALLPUTER
+
+for i in bwDataRaw:
+    match i:
+        case "/Game/HouseAssets/Wallpaper/AlpineInnerWall/AlpineInnerWall.AlpineInnerWall":
+            bw_idlist.append("14070")
+        case "/Game/HouseAssets/Wallpaper/AmaurotineInteriorWall/AmaurotineInteriorWall.AmaurotineInteriorWall":
+            bw_idlist.append("37408")
+        case "/Game/HouseAssets/Wallpaper/ArborInteriorWall/ArborInteriorWall.ArborInteriorWall":
+            bw_idlist.append("7138")
+        case "/Game/HouseAssets/Wallpaper/Black-and-whiteInteriorWall/Black-and-whiteInteriorWall.Black-and-whiteInteriorWall":
+            bw_idlist.append("24539")
+        case "/Game/HouseAssets/Wallpaper/BlueskyInteriorWall/BlueskyInteriorWall.BlueskyInteriorWall":
+            bw_idlist.append("15165")
+        case "/Game/HouseAssets/Wallpaper/ChocoboInteriorWall/ChocoboInteriorWall.ChocoboInteriorWall":
+            bw_idlist.append("7139")
+        case "/Game/HouseAssets/Wallpaper/ClassicInteriorWall/ClassicInteriorWall.ClassicInteriorWall":
+            bw_idlist.append("8010")
+        case "/Game/HouseAssets/Wallpaper/CobInnerWall/CobInnerWall.CobInnerWall":
+            bw_idlist.append("13095")
+        case "/Game/HouseAssets/Wallpaper/CountryInteriorWall/CountryInteriorWall.CountryInteriorWall":
+            bw_idlist.append("7131")
+        case "/Game/HouseAssets/Wallpaper/EerieWallpaper/EerieWallpaper.EerieWallpaper":
+            bw_idlist.append("8829")
+        case "/Game/HouseAssets/Wallpaper/EggstravagantInteriorWall/EggstravagantInteriorWall.EggstravagantInteriorWall":
+            bw_idlist.append("17033")
+        case "/Game/HouseAssets/Wallpaper/EulmoranInnerWall/EulmoranInnerWall.EulmoranInnerWall":
+            bw_idlist.append("28126")
+        case "/Game/HouseAssets/Wallpaper/FactoryInteriorWall/FactoryInteriorWall.FactoryInteriorWall":
+            bw_idlist.append("30378")
+        case "/Game/HouseAssets/Wallpaper/FlameInteriorWall/FlameInteriorWall.FlameInteriorWall":
+            bw_idlist.append("7135")
+        case "/Game/HouseAssets/Wallpaper/FortempsManorInteriorWall/FortempsManorInteriorWall.FortempsManorInteriorWall":
+            bw_idlist.append("17032")
+        case "/Game/HouseAssets/Wallpaper/GarleanConcreteInnerWall/GarleanConcreteInnerWall.GarleanConcreteInnerWall":
+            bw_idlist.append("35809")
+        case "/Game/HouseAssets/Wallpaper/GladeFloraInteriorWall/GladeFloraInteriorWall.GladeFloraInteriorWall":
+            bw_idlist.append("8008")
+        case "/Game/HouseAssets/Wallpaper/GladeInteriorWall/GladeInteriorWall.GladeInteriorWall":
+            bw_idlist.append("6456")
+        case "/Game/HouseAssets/Wallpaper/GoldenKasamatsuInteriorWall/GoldenKasamatsuInteriorWall.GoldenKasamatsuInteriorWall":
+            bw_idlist.append("24185")
+        case "/Game/HouseAssets/Wallpaper/GoldenUpholsteredInteriorWall/GoldenUpholsteredInteriorWall.GoldenUpholsteredInteriorWall":
+            bw_idlist.append("24184")
+        case "/Game/HouseAssets/Wallpaper/GoldLeafInteriorWall/GoldLeafInteriorWall.GoldLeafInteriorWall":
+            bw_idlist.append("20717")
+        case "/Game/HouseAssets/Wallpaper/HannishInteriorWall/HannishInteriorWall.HannishInteriorWall":
+            bw_idlist.append("39429")
+        case "/Game/HouseAssets/Wallpaper/HighlandInteriorWall/HighlandInteriorWall.HighlandInteriorWall":
+            bw_idlist.append("36887")
+        case "/Game/HouseAssets/Wallpaper/HinganInteriorWall/HinganInteriorWall.HinganInteriorWall":
+            bw_idlist.append("20716")
+        case "/Game/HouseAssets/Wallpaper/HouseBorelInteriorWall/HouseBorelInteriorWall.HouseBorelInteriorWall":
+            bw_idlist.append("21867")
+        case "/Game/HouseAssets/Wallpaper/LeveilleurEstateInteriorWall/LeveilleurEstateInteriorWall.LeveilleurEstateInteriorWall":
+            bw_idlist.append("38674")
+        case "/Game/HouseAssets/Wallpaper/LilyHillsInteriorWall/LilyHillsInteriorWall.LilyHillsInteriorWall":
+            bw_idlist.append("17989")
+        case "/Game/HouseAssets/Wallpaper/MasonworkInteriorWall/MasonworkInteriorWall.MasonworkInteriorWall":
+            bw_idlist.append("8831")
+        case "/Game/HouseAssets/Wallpaper/MetalInteriorWall/MetalInteriorWall.MetalInteriorWall":
+            bw_idlist.append("7137")
+        case "/Game/HouseAssets/Wallpaper/MGSInteriorWall/MGSInteriorWall.MGSInteriorWall":
+            bw_idlist.append("10345")
+        case "/Game/HouseAssets/Wallpaper/MoogleInteriorWall/MoogleInteriorWall.MoogleInteriorWall":
+            bw_idlist.append("7140")
+        case "/Game/HouseAssets/Wallpaper/MosaicInteriorWall/MosaicInteriorWall.MosaicInteriorWall":
+            bw_idlist.append("8012")
+        case "/Game/HouseAssets/Wallpaper/OasisFloraInteriorWall/OasisFloraInteriorWall.OasisFloraInteriorWall":
+            bw_idlist.append("8009")
+        case "/Game/HouseAssets/Wallpaper/OasisInteriorWall/OasisInteriorWall.OasisInteriorWall":
+            bw_idlist.append("6457")
+        case "/Game/HouseAssets/Wallpaper/PalaceOfTheDeadInteriorWall/PalaceOfTheDeadInteriorWall.PalaceOfTheDeadInteriorWall":
+            bw_idlist.append("16015")
+        case "/Game/HouseAssets/Wallpaper/RivieraFloraInteriorWall/RivieraFloraInteriorWall.RivieraFloraInteriorWall":
+            bw_idlist.append("8007")
+        case "/Game/HouseAssets/Wallpaper/RivieraInteriorWall/RivieraInteriorWall.RivieraInteriorWall":
+            bw_idlist.append("6455")
+        case "/Game/HouseAssets/Wallpaper/RoughStoneInteriorWall/RoughStoneInteriorWall.RoughStoneInteriorWall":
+            bw_idlist.append("28960")
+        case "/Game/HouseAssets/Wallpaper/SerpentInteriorWall/SerpentInteriorWall.SerpentInteriorWall":
+            bw_idlist.append("7134")
+        case "/Game/HouseAssets/Wallpaper/Solid-brickInteriorWall/Solid-brickInteriorWall.Solid-brickInteriorWall":
+            bw_idlist.append("22530")
+        case "/Game/HouseAssets/Wallpaper/SpottedInteriorWall/SpottedInteriorWall.SpottedInteriorWall":
+            bw_idlist.append("9766")
+        case "/Game/HouseAssets/Wallpaper/StainedCrystalInteriorWall/StainedCrystalInteriorWall.StainedCrystalInteriorWall":
+            bw_idlist.append("10346")
+        case "/Game/HouseAssets/Wallpaper/StarlightInteriorWall/StarlightInteriorWall.StarlightInteriorWall":
+            bw_idlist.append("8830")
+        case "/Game/HouseAssets/Wallpaper/StoneInteriorWall/StoneInteriorWall.StoneInteriorWall":
+            bw_idlist.append("7132")
+        case "/Game/HouseAssets/Wallpaper/StormBlueInteriorWall/StormBlueInteriorWall.StormBlueInteriorWall":
+            bw_idlist.append("33248")
+        case "/Game/HouseAssets/Wallpaper/StormInteriorWall/StormInteriorWall.StormInteriorWall":
+            bw_idlist.append("7133")
+        case "/Game/HouseAssets/Wallpaper/StripedInteriorWall/StripedInteriorWall.StripedInteriorWall":
+            bw_idlist.append("8011")
+        case "/Game/HouseAssets/Wallpaper/Sultana_sBreathInteriorWall/Sultana_sBreathInteriorWall.Sultana_sBreathInteriorWall":
+            bw_idlist.append("17990")
+        case "/Game/HouseAssets/Wallpaper/TiledInteriorWall/TiledInteriorWall.TiledInteriorWall":
+            bw_idlist.append("7136")
+        case "/Game/HouseAssets/Wallpaper/TopmastInteriorWall/TopmastInteriorWall.TopmastInteriorWall":
+            bw_idlist.append("17988")
+        case "/Game/HouseAssets/Wallpaper/UnfinishedInteriorWall/UnfinishedInteriorWall.UnfinishedInteriorWall":
+            bw_idlist.append("23902")
+        case "/Game/HouseAssets/Wallpaper/VariedWoodInteriorWall/VariedWoodInteriorWall.VariedWoodInteriorWall":
+            bw_idlist.append("32254")
+        case "/Game/HouseAssets/Wallpaper/WalnutInteriorWall/WalnutInteriorWall.WalnutInteriorWall":
+            bw_idlist.append("27268")
+        case "/Game/HouseAssets/Wallpaper/WavyInteriorWall/WavyInteriorWall.WavyInteriorWall":
+            bw_idlist.append("9767")
+        case "/Game/HouseAssets/Wallpaper/WhiteInteriorWall/WhiteInteriorWall.WhiteInteriorWall":
+            bw_idlist.append("17034")
+
+
+
+
+#########################################################################################################################################
+
 ### DUPLICATE ITEM HANDLER
 
 
@@ -567,21 +711,23 @@ if thinkmode == 1:
     time.sleep(speed)
     print("Inside fixture tally complete!")
 
-for i in outside_furniturelistData:
-    if i not in counter:
-        counter[i] = 0
-    counter[i] += 1
+if houseSize != "Apartment":
+    for i in outside_furniturelistData:
+        if i not in counter:
+            counter[i] = 0
+        counter[i] += 1
 
 if thinkmode == 1:
     print("")
     time.sleep(speed)
     print("Outside furniture tally complete!")
 
-for i in outside_fixturelistData:
-    if i != 0:
-        if i not in counter:
-            counter[i] = 0
-        counter[i] += 1
+if houseSize != "Apartment":
+    for i in outside_fixturelistData:
+        if i != 0:
+            if i not in counter:
+                counter[i] = 0
+            counter[i] += 1
 
 if thinkmode == 1:
     print("")
@@ -597,6 +743,16 @@ if thinkmode == 1:
     print("")
     time.sleep(speed)
     print("Dye tally complete!")
+
+for i in bw_idlist:
+    if i not in counter:
+        counter[i] = 0
+    counter[i] += 1
+
+if thinkmode == 1:
+    print("")
+    time.sleep(speed)
+    print("Extra wall tally complete!")
 
 dictionary = dict(counter)
 iterator = 0
@@ -646,24 +802,24 @@ if thinkmode == 1:
     print(f"Your encoded string is: {encoded_string}")
     print("")
 
-almost_done = str(url + encoded_string)
+final = str(url + encoded_string)
+final = remove1st(final, "b'")
+final = final[:-1]
 
 
-
-final = remove1st(almost_done, "b'")
-
-
-
-if thinkmode != 1:
-    browser.open_new(final)
-
-if thinkmode == 1:
-    print("Your makeplace file has been converted to teamcraft, please import it by pasting this link into your web browser:")
-    print("")
-    time.sleep(speed)
-    print(final)
-    print("")
-    time.sleep(speed)
+print("Your makeplace file has been converted to teamcraft, please import it by pasting this link into your web browser: ")
+print("")
+time.sleep(speed)
+print(final)
+print("")
+time.sleep(speed)
 
 
-input("Please hit enter to close the program")
+print("Please hit enter to open the link in your default web browser!")
+input("")
+browser.open(final)
+print("Made with love by Petra!")
+print("https://deafbun.carrd.co")
+print("")
+print("Please press enter to close the program!")
+input("")
