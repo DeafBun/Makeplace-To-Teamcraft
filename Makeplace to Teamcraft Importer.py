@@ -1,7 +1,7 @@
 ### CREATED BY PETRA ULSTRAD
 ### HTTPS://PETRA.CARRD.CO
 ### IF I SEE ANYONE CHARGING FOR THIS PLS DONT IDK HOW TO LICENSE ITS JUST SUPPOSED TO BE A NICE PIECE OF CODE THATLL HELP PEOPLE DEAL WITH A LITTLE LESS MONOTANY
-
+from tkinter import *
 import json
 import base64
 from collections import Counter
@@ -225,6 +225,17 @@ if thinkmode == 1:
     time.sleep(speed)
 
 outside_furniturelistData = sorted(outside_furniturelistData)
+
+#########################################################################################################################################
+## HANDLING OF RANDOM THINGS THAT EQUAL 0
+for i in inside_fixturelistNames:
+    if i == "Leveilleur Estate Interior Wall":
+        inside_fixturelistData.append("38674")
+    if i == "Leveilleur Estate Flooring":
+        inside_fixturelistData.append("38672")
+    if i == "Leveilleur Estate Chandelier":
+        inside_furniturelistData.append("38673")
+
 
 #########################################################################################################################################
 
