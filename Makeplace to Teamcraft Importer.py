@@ -228,13 +228,13 @@ outside_furniturelistData = sorted(outside_furniturelistData)
 
 #########################################################################################################################################
 ## HANDLING OF RANDOM THINGS THAT EQUAL 0
-for i in inside_fixturelistNames:
-    if i == "Leveilleur Estate Interior Wall":
-        inside_fixturelistData.append("38674")
-    if i == "Leveilleur Estate Flooring":
-        inside_fixturelistData.append("38672")
-    if i == "Leveilleur Estate Chandelier":
-        inside_furniturelistData.append("38673")
+#for i in inside_fixturelistNames:
+#    if i == "Leveilleur Estate Interior Wall":
+#        inside_fixturelistData.append("38674")
+#    if i == "Leveilleur Estate Flooring":
+#        inside_fixturelistData.append("38672")
+#    if i == "Leveilleur Estate Chandelier":
+#        inside_furniturelistData.append("38673")
 
 
 #########################################################################################################################################
