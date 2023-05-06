@@ -1,4 +1,10 @@
 # Makeplace-To-Teamcraft
+
+v0.7
+
+This program is designed to work with the Itch.io version of MakePlace, please go grab it here!
+https://jawslouis.itch.io/makeplace
+
 Turn your makeplace .json files into an import link usable by teamcraft!
 
 It works! Yipee!
@@ -9,4 +15,3 @@ Download the .exe: https://github.com/DeafBun/Makeplace-To-Teamcraft/raw/main/Ma
 
 You can also run the .py file in your IDE of choice!
 
-GUI soon(tm)
