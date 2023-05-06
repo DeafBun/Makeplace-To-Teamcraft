@@ -1,31 +1,38 @@
 ### CREATED BY PETRA ULSTRAD
 ### HTTPS://PETRA.CARRD.CO
 ### IF I SEE ANYONE CHARGING FOR THIS PLS DONT IDK HOW TO LICENSE ITS JUST SUPPOSED TO BE A NICE PIECE OF CODE THATLL HELP PEOPLE DEAL WITH A LITTLE LESS MONOTANY
-from tkinter import *
+import os
 import json
 import base64
 from collections import Counter
 import webbrowser
 import time
+import tkinter as tk
+from tkinter import filedialog
 browser = webbrowser.get()
 counter = {}
 
 ##DISCLAIMERS:
 print("Please be sure to use the most recent version of Makeplace for this converter to work at its best!")
 print("")
-time.sleep(2)
-print("To get your filepath to paste below, shift + right click on your .json file, and select \"Copy as path\"")
+##time.sleep(2)
+print("A file dialogue will open shortly. Please select the file you wish to convert.")
 print("")
-time.sleep(2)
-print("Be sure to remove the quotation marks from the file path as well!")
-print("")
-time.sleep(2)
+##time.sleep(2)
+#print("Be sure to remove the quotation marks from the file path as well!")
+#print("")
+#time.sleep(2)
 print("Happy Housing!")
 print("")
-time.sleep(2)
+#time.sleep(2)
+
+def choose_file():
+    default_dir = os.path.join(os.path.expandvars("%APPDATA%"), "itch/apps/Makeplace/MakePlace/Save")
+    file_path = filedialog.askopenfilename(initialdir=default_dir, filetypes=[("Makeplace JSON files", "*.json")])
+    return file_path
 
 ## FILE AND URL
-mpFile = input("Please input your file path: ")
+mpFile = choose_file()
 print("")
 file = open(mpFile)
 data = json.load(file)
@@ -147,7 +154,7 @@ for i in insideFurniture:
         if thinkmode == 1:
             print("Inside Furnishing Added!")
             print("")
-            time.sleep(speed)
+            #time.sleep(speed)
 
 for i in outsideFurniture:
     if i != None:
@@ -156,7 +163,7 @@ for i in outsideFurniture:
         if thinkmode == 1:
             print(f"Outside Furnishing Added!")
             print("")
-            time.sleep(speed)
+            #time.sleep(speed)
 
 for i in insideFixtures:
     if i != None:
@@ -165,7 +172,7 @@ for i in insideFixtures:
         if thinkmode == 1:
             print(f"Inside Fixture Added!")
             print("")
-            time.sleep(speed)
+            #time.sleep(speed)
 
 for i in outsideFixtures:
     if i != None:
@@ -173,56 +180,56 @@ for i in outsideFixtures:
         outside_fixturelistData.append(i["itemId"])
         if thinkmode == 1:
             print(f"Outside Fixture Added!")
-            time.sleep(speed)
+            #time.sleep(speed)
 
 #########################################################################################################################################
 
 ## SORTING THE THINGS
 if thinkmode == 1:
     print("Sorting Inside Furniture List Names...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 inside_furniturelistNames = sorted(inside_furniturelistNames)
 
 if thinkmode == 1:
     print("Sorting Inside Fixture List Names...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 inside_fixturelistNames = sorted(inside_fixturelistNames)
 
 if thinkmode == 1:
     print("Sorting Inside Furniture List Data...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 inside_fixturelistData = sorted(inside_fixturelistData)
 
 if thinkmode == 1:
     print("Sorting Inside Fixture List Data...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 inside_furniturelistData = sorted(inside_furniturelistData)
 
 if thinkmode == 1:
     print("Sorting Outside Fixture List Names...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 outside_fixturelistNames = sorted(outside_fixturelistNames)
 
 if thinkmode == 1:
     print("Sorting Outside Fixture List Data...")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 outside_fixturelistData = sorted(outside_fixturelistData)
 
 if thinkmode == 1:
     print("Sorting Outside Furniture List Names")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 outside_furniturelistNames = sorted(outside_furniturelistNames)
 
 if thinkmode == 1:
     print("Sorting Outside Fixture List Names")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 outside_furniturelistData = sorted(outside_furniturelistData)
 
@@ -252,7 +259,7 @@ for i in dyelistrawOUT:
 
 if thinkmode == 1:
     print("The Dyeputer is running through the 102 case switch statement from hell...")
-    time.sleep(speed * 5)
+    #time.sleep(speed * 5)
 
 ## THE SWITCH STATEMENT TO END ALL SWITCH STATEMENTS RAHHHHHHHHHHHHHHHHHHHHH
 for i in dyelistclean:
@@ -696,19 +703,19 @@ for i in inside_furniturelistData:
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Inside furniture tally complete!")
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Removing null fixtures and furnishings...")
 
 inside_fixturelistData.remove(0)
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("No more null fixtures or furnishings!!")
 
 for i in inside_fixturelistData:
@@ -719,7 +726,7 @@ for i in inside_fixturelistData:
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Inside fixture tally complete!")
 
 if houseSize != "Apartment":
@@ -730,7 +737,7 @@ if houseSize != "Apartment":
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Outside furniture tally complete!")
 
 if houseSize != "Apartment":
@@ -742,7 +749,7 @@ if houseSize != "Apartment":
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Outside fixture tally complete!")
 
 for i in dyeID:
@@ -752,7 +759,7 @@ for i in dyeID:
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Dye tally complete!")
 
 for i in bw_idlist:
@@ -762,7 +769,7 @@ for i in bw_idlist:
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Extra wall tally complete!")
 
 dictionary = dict(counter)
@@ -782,7 +789,7 @@ for i in dictIDs:
     iterator += 1
     if thinkmode == 1:
         print("")
-        time.sleep(speed)
+        #time.sleep(speed)
         print(i)
 
 
@@ -790,16 +797,16 @@ iterator = 0
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print("Cleaning up!")
-    time.sleep(speed)
+    #time.sleep(speed)
 
 furniturelistfull.pop(-1)
 pre_encoded_string = ''.join(furniturelistfull)
 
 if thinkmode == 1:
     print("")
-    time.sleep(speed)
+    #time.sleep(speed)
     print(f"Preincoded string: {pre_encoded_string}")
     print("")
 
@@ -809,7 +816,7 @@ encoded = base64.b64encode(pre_encoded_string.encode('utf-8'))
 encoded_string = str(encoded)
 
 if thinkmode == 1:
-    time.sleep(speed)
+    #time.sleep(speed)
     print(f"Your encoded string is: {encoded_string}")
     print("")
 
@@ -818,19 +825,11 @@ final = remove1st(final, "b'")
 final = final[:-1]
 
 
-print("Your makeplace file has been converted to teamcraft, please import it by pasting this link into your web browser: ")
 print("")
-time.sleep(speed)
+#time.sleep(speed)
 print(final)
 print("")
-time.sleep(speed)
-
-
-print("Please hit enter to open the link in your default web browser!")
-input("")
+#time.sleep(speed)
 browser.open(final)
 print("Made with love by Petra!")
 print("https://deafbun.carrd.co")
-print("")
-print("Please press enter to close the program!")
-input("")
