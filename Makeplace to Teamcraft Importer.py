@@ -687,6 +687,8 @@ for i in bwDataRaw:
             bw_idlist.append("9767")
         case "/Game/HouseAssets/Wallpaper/WhiteInteriorWall/WhiteInteriorWall.WhiteInteriorWall":
             bw_idlist.append("17034")
+        case "/Game/HouseAssets/Wallpaper/Watcher_sPalaceInteriorWall/Watcher_sPalaceInteriorWall.Watcher_sPalaceInteriorWall":
+            bw_idlist.append("40620")
 
 
 
