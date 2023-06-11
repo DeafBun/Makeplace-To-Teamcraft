@@ -2,6 +2,8 @@
 
 v0.7
 
+=============================================================================================================================
+
 This program is designed to work with the Itch.io version of MakePlace, please go grab it here!
 https://jawslouis.itch.io/makeplace
 
@@ -15,3 +17,8 @@ Download the .exe: https://github.com/DeafBun/Makeplace-To-Teamcraft/raw/main/Ma
 
 You can also run the .py file in your IDE of choice!
 
+=============================================================================================================================
+
+If you like the tool! Feel free to also just shoot me a message in the tech support discord!
+
+If for some reason you want to monetarily contribute, please feel free to donate to the [National Assoc. of the Deaf](https://www.nad.org/donate/)
