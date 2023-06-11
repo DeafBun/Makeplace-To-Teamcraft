@@ -19,6 +19,6 @@ You can also run the .py file in your IDE of choice!
 
 =============================================================================================================================
 
-If you like the tool! Feel free to also just shoot me a message in the tech support discord!
+If you like the tool! Feel free to just shoot me a message in the tech support discord saying you liked it!
 
-If for some reason you want to monetarily contribute, please feel free to donate to the [National Assoc. of the Deaf](https://www.nad.org/donate/)
+If for some reason you want to monetarily contribute, please feel free to donate to the [National Assoc. of the Deaf](https://www.nad.org/donate/), send me a pic of your donation, and ill credit you or your character in this readme and the code!
