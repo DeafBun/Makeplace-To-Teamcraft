@@ -29,5 +29,4 @@ If for some reason you want to monetarily contribute, please feel free to donate
 =============================================================================================================================
 
 KNOWN ISSUES:
-If you notice an item is not there! Let me know! Currently this program skips:
-Hannish Interior Walls applied to Blank Interior Walls (as of makeplace v119, though it will automatically work after the bug in makeplace is squished!)
+If you notice an item is not there! Let me know! Currently this program skips things when it cannot find a valid item id! So.... let me know what was skipped and ill file a bug report with Jawslouis and get it fixed proper!
