@@ -1,11 +1,14 @@
 # Makeplace-To-Teamcraft
 
-v0.7
+v0.7.1
 
 =============================================================================================================================
 
 This program is designed to work with the Itch.io version of MakePlace, please go grab it here!
 https://jawslouis.itch.io/makeplace
+
+***If you are just NOW switching to the itch.io version of makeplace, please open and resave your files!***
+***This updates the filestructure to work with this tool!***
 
 Turn your makeplace .json files into an import link usable by teamcraft!
 
@@ -22,3 +25,9 @@ You can also run the .py file in your IDE of choice!
 If you like the tool! Feel free to just shoot me a message in the tech support discord saying you liked it!
 
 If for some reason you want to monetarily contribute, please feel free to donate to the [National Assoc. of the Deaf](https://www.nad.org/donate/), send me a pic of your donation, and ill credit you or your character in this readme and the code!
+
+=============================================================================================================================
+
+KNOWN ISSUES:
+If you notice an item is not there! Let me know! Currently this program skips:
+Hannish Interior Walls applied to Blank Interior Walls (as of makeplace v119, though it will automatically work after the bug in makeplace is squished!)
