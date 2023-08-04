@@ -140,6 +140,12 @@ bw_idlist = []
 bwDataRaw = list(extract_element_from_json(data, ["interiorFurniture", "properties", "material", "itemId"]))
 print(bwDataRaw)
 
+##Grouphandler
+groupHandlerIN = list(extract_element_from_json(data, ["interiorFurniture", "attachments", "itemId"]))
+groupHandlerColorIN = list(extract_element_from_json(data, ["interiorFurniture", "attachments", "properties", "color"]))
+groupHandlerOUT = list(extract_element_from_json(data, ["exteriorFurniture", "attachments", "itemId"]))
+groupHandlerColorOUT = list(extract_element_from_json(data, ["exteriorFurniture", "attachments", "properties", "color"]))
+
 ## EVERYTHING LIST
 furniturelistfull = []
 
@@ -187,6 +193,26 @@ for i in bwDataRaw:
     if i != None:
         if i != 0:
             bw_idlist.append(i)
+
+for i in groupHandlerIN:
+    if i != None:
+        if i != 0:
+            inside_furniturelistData.append(i)
+
+for i in groupHandlerColorIN:
+    if i != None:
+        if i != 0:
+            dyelistrawIN.append(i)
+
+for i in groupHandlerOUT:
+    if i != None:
+        if i != 0:
+            outside_furniturelistData.append(i)
+
+for i in groupHandlerColorOUT:
+    if i != None:
+        if i != 0:
+            dyelistrawIN.append(i)
 
 #########################################################################################################################################
 
