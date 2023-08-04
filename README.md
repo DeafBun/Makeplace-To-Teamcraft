@@ -29,4 +29,7 @@ If for some reason you want to monetarily contribute, please feel free to donate
 =============================================================================================================================
 
 KNOWN ISSUES:
+
+Does not work in non-english languages currently, so please switch your language and re save and itll be ready for import until I figure out a fix!
+
 If you notice an item is not there! Let me know! Currently this program skips things when it cannot find a valid item id! So.... let me know what was skipped and ill file a bug report with Jawslouis and get it fixed proper!
